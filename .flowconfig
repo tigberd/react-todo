@@ -1,0 +1,41 @@
+[ignore]
+.*/fbjs/lib/.*
+.*/fbjs/lib/utils/.*
+.*/react-event-listener/.*
+.*/styled-components/dangerfile.js
+.*/styled-components/lib/models/InlineStyle.js.flow
+.*/styled-components/lib/.*
+.*/styled-components/src/.*
+.*/stylelint/lib/.*
+
+.*/dist/.*
+.*/git/.*
+
+[include]
+
+[libs]
+node_modules/styled-components/flow-typed/react-native.js
+node_modules/styled-components/flow-typed/lodash_v4.x.x.js
+node_modules/styled-components/flow-typed/inline-style-prefixer_vx.x.x.js
+node_modules/immutable/dist/immutable.js.flow
+
+[options]
+esproposal.class_instance_fields=enable
+unsafe.enable_getters_and_setters=true
+esproposal.decorators=ignore
+
+module.file_ext=.js
+module.file_ext=.json
+module.file_ext=.yml
+
+module.name_mapper='^actions\/\(.*\)$' -> '<PROJECT_ROOT>/src/actions/\1'
+module.name_mapper='^actions$' -> '<PROJECT_ROOT>/src/actions'
+
+module.name_mapper='^components\/\(.*\)$' -> '<PROJECT_ROOT>/src/components/\1'
+module.name_mapper='^components$' -> '<PROJECT_ROOT>/src/components'
+
+module.name_mapper='^states\/\(.*\)$' -> '<PROJECT_ROOT>/src/states/\1'
+module.name_mapper='^states$' -> '<PROJECT_ROOT>/src/states'
+
+module.name_mapper='^types\/\(.*\)$' -> '<PROJECT_ROOT>/src/types/\1'
+module.name_mapper='^types$' -> '<PROJECT_ROOT>/src/types'
